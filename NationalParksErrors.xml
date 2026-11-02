@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ERROR 1: Root renamed to NationalPark, including its closing tag. -->
+<NationalPark xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="NationalParks.xsd">
+
+  <!-- Figure 1 sample: preserve all supplied values, including FlagStaff. -->
+  <NationalPark Rating="4.9">
+    <Name>Grand Canyon</Name>
+    <!-- The following three numbers are the assignment's supplied samples. -->
+    <Phone>928-638-7496</Phone>
+    <Phone>888-297-2757</Phone>
+    <Phone>866-499-2574</Phone>
+    <!-- Current NPS general park information: https://www.nps.gov/grca/contacts.htm -->
+    <Phone>928-638-7888</Phone>
+    <Address NearestAirport="FlagStaff">
+      <Number>8</Number>
+      <Street>S Entrance Road</Street>
+      <City>Grand Canyon</City>
+      <State>AZ</State>
+      <Zip>86023</Zip>
+    </Address>
+  </NationalPark>
+
+  <!-- NPS shipping address and phones: https://www.nps.gov/acad/contacts.htm -->
+  <NationalPark>
+    <Name>Acadia National Park</Name>
+    <!-- General information, followed by TTY. -->
+    <Phone>207-288-3338</Phone>
+    <Phone>207-288-8800</Phone>
+    <!-- ERROR 2: Required NearestAirport attribute omitted for Acadia. -->
+    <Address>
+      <Number>20</Number>
+      <Street>McFarland Hill Drive</Street>
+      <City>Bar Harbor</City>
+      <State>ME</State>
+      <Zip>04609-0177</Zip>
+    </Address>
+  </NationalPark>
+
+  <!-- NPS official mail and phone: https://www.nps.gov/zion/contacts.htm -->
+  <!-- Rating: Tripadvisor park listing, 4.7 out of 5; source URL in source notes. -->
+  <NationalPark Rating="4.7">
+    <Name>Zion National Park</Name>
+    <!-- ERROR 3: Zion's only Phone element has been removed. -->
+    <Address NearestAirport="St. George Regional Airport (SGU)">
+      <Number>1</Number>
+      <Street>Zion Park Blvd.</Street>
+      <City>Springdale</City>
+      <State>UT</State>
+      <Zip>84767-1099</Zip>
+    </Address>
+  </NationalPark>
+
+  <!-- NPS administrative/backcountry office address; general visitor phone. -->
+  <!-- https://www.nps.gov/arch/planyourvisit/backpacking.htm -->
+  <!-- https://www.nps.gov/arch/contacts.htm -->
+  <NationalPark>
+    <Name>Arches National Park</Name>
+    <Phone>435-719-2299</Phone>
+    <Address NearestAirport="Canyonlands Regional Airport (CNY)">
+      <Number>2282</Number>
+      <Street>SW Resource Blvd.</Street>
+      <City>Moab</City>
+      <State>UT</State>
+      <Zip>84532</Zip>
+    <!-- ERROR 4: The closing Address tag for Arches has been removed. -->
+  </NationalPark>
+
+  <!-- NPS mailing address and phones: https://www.nps.gov/cany/contacts.htm -->
+  <NationalPark>
+    <Name>Canyonlands National Park</Name>
+    <!-- General information, backcountry reservations, Island in the Sky visitor center. -->
+    <Phone>435-719-2313</Phone>
+    <Phone>435-241-3110</Phone>
+    <Phone>435-241-1314</Phone>
+    <Address NearestAirport="Canyonlands Regional Airport (CNY)">
+      <Number>2282</Number>
+      <Street>SW Resource Blvd.</Street>
+      <City>Moab</City>
+      <State>UT</State>
+      <Zip>84532</Zip>
+    </Address>
+  </NationalPark>
+
+  <!-- NPS headquarters address and general phone: https://www.nps.gov/badl/ -->
+  <NationalPark>
+    <Name>Badlands National Park</Name>
+    <!-- ERROR 5: A second Name is supplied for Badlands. -->
+    <Name>Badlands</Name>
+    <Phone>605-433-5361</Phone>
+    <Address NearestAirport="Rapid City Regional Airport (RAP)">
+      <Number>25216</Number>
+      <Street>Ben Reifel Road</Street>
+      <City>Interior</City>
+      <State>SD</State>
+      <Zip>57750</Zip>
+    </Address>
+  </NationalPark>
+
+  <!-- NPS headquarters address and general phone: https://www.nps.gov/ever/contacts.htm -->
+  <NationalPark>
+    <Name>Everglades National Park</Name>
+    <Phone>305-242-7700</Phone>
+    <Address NearestAirport="Miami International Airport (MIA)">
+      <Number>40001</Number>
+      <Street>State Road 9336</Street>
+      <City>Homestead</City>
+      <State>FL</State>
+      <Zip>33034-6733</Zip>
+    </Address>
+  </NationalPark>
+
+  <!-- NPS address and phones: https://www.nps.gov/bisc/contacts.htm -->
+  <NationalPark>
+    <Name>Biscayne National Park</Name>
+    <!-- Information desk, followed by permit information. -->
+    <Phone>786-335-3620</Phone>
+    <Phone>786-335-3639</Phone>
+    <Address NearestAirport="Miami International Airport (MIA)">
+      <Number>9700</Number>
+      <Street>SW 328th Street (Sir Lancelot Jones Way)</Street>
+      <City>Homestead</City>
+      <State>FL</State>
+      <Zip>33033</Zip>
+    </Address>
+  </NationalPark>
+
+  <!-- NPS Rincon Mountain District (East) address: https://www.nps.gov/sagu/contacts.htm -->
+  <NationalPark>
+    <Name>Saguaro National Park</Name>
+    <!-- East district, West district, then headquarters. -->
+    <Phone>520-733-5153</Phone>
+    <Phone>520-733-5158</Phone>
+    <Phone>520-733-5100</Phone>
+    <Address NearestAirport="Tucson International Airport (TUS)">
+      <Number>3693</Number>
+      <Street>South Old Spanish Trail</Street>
+      <City>Tucson</City>
+      <State>AZ</State>
+      <Zip>85730-5601</Zip>
+    </Address>
+  </NationalPark>
+
+  <!-- NPS mailing address and phones: https://www.nps.gov/jotr/contacts.htm -->
+  <NationalPark>
+    <Name>Joshua Tree National Park</Name>
+    <!-- Visitor information, followed by campgrounds and backpacking permits. -->
+    <Phone>760-367-5500</Phone>
+    <Phone>760-367-5554</Phone>
+    <Address NearestAirport="Palm Springs International Airport (PSP)">
+      <Number>74485</Number>
+      <Street>National Park Drive</Street>
+      <City>Twentynine Palms</City>
+      <State>CA</State>
+      <Zip>92277-3597</Zip>
+    </Address>
+  </NationalPark>
+
+  <!-- NPS mailing address and visitor phone: https://www.nps.gov/cong/contacts.htm -->
+  <NationalPark>
+    <Name>Congaree National Park</Name>
+    <Phone>803-776-4396</Phone>
+    <Address NearestAirport="Columbia Metropolitan Airport (CAE)">
+      <Number>100</Number>
+      <Street>National Park Road</Street>
+      <City>Hopkins</City>
+      <State>SC</State>
+      <Zip>29061-9118</Zip>
+    </Address>
+  </NationalPark>
+
+</NationalPark>
